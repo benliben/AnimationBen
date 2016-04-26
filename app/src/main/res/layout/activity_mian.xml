@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/fresco_img"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
+
 </LinearLayout>

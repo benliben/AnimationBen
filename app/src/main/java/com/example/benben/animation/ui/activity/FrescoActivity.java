@@ -15,7 +15,7 @@ import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 /**
- * Created by Administrator on 2016/4/23.
+ * Created by ben on 2016/4/23.
  */
 public class FrescoActivity extends AppCompatActivity {
 
@@ -23,7 +23,6 @@ public class FrescoActivity extends AppCompatActivity {
 
     public static void startFrescoActivity(Activity activity) {
 
-        Log.i("JAM", "--");
         Intent intent = new Intent(activity, FrescoActivity.class);
         ActivityCompat.startActivity(activity, intent, null);
     }

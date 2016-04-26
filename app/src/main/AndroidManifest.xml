@@ -3,22 +3,36 @@
     package="com.example.benben.animation">
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".MyApp"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-
+        <!--Fresco-->
         <activity android:name=".ui.activity.FrescoActivity"></activity>
+        <!--LayoutAnimationController-->
+        <activity android:name=".ui.activity.LayoutAnimationControllerActivity"></activity>
+        <!--Animation-->
+        <activity android:name=".ui.activity.AnimationActivity" ></activity>
+        <!--AnimationListener-->
+        <activity android:name=".ui.activity.AnimationListener"></activity>
+        <!--********************************************************************-->
+        <!--属性动画-->
+        <activity android:name=".ui.activity.PropertyAnimationActivity"></activity>
+        <!--ObjectAnimator-->
+        <activity android:name=".ui.activity.ObjectAnimatorActivity"></activity>
+        <!--ValueAnimator-->
+        <activity android:name=".ui.activity.ValueAnimatorActivity"></activity>
+        <!--********************************************************************-->
+
     </application>
 
 </manifest>

@@ -9,65 +9,76 @@ import android.widget.TextView;
 import com.example.benben.animation.R;
 
 /**
- * Created by benben on 2016/4/25.
+ * Created by benben on 2016/4/22.
+ * RecyclerView的适配器
  */
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
-    private String[] mDatas = null;
+public class AnimationAdapter extends RecyclerView.Adapter<AnimationAdapter.ViewHolder> {
+    private String[] datas = null;
     private OnItemClickListener mListener;
 
-    public MainAdapter(String[] mDatas) {
-        this.mDatas = mDatas;
+    public AnimationAdapter(String[] datas) {
+        this.datas = datas;
     }
 
-
-    /**创建ViewHolder*/
+    /**
+     * 创建view
+     */
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_main, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.time_main, parent, false);
         ViewHolder mHolder = new ViewHolder(view);
         return mHolder;
     }
 
-    /**绑定ViewHolder*/
+    /**
+     * 绑定ViewHolder
+     */
     @Override
-    public void onBindViewHolder(final ViewHolder holder, final int position) {
-        holder.mTextView.setText(mDatas[position]);
+    public void onBindViewHolder(final ViewHolder holder, int position) {
+        holder.mTextView.setText(datas[position]);
 
         /**设置监听*/
         if (mListener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int pos = holder.getLayoutPosition();//得到当前点击item的位置
-                    mListener.ItemClickListener(holder.itemView, pos);//把事情交给实现类的接口去实现
+                    int pos=holder.getLayoutPosition();//得到当前点击item的位置
+                    mListener.ItemClickListener(holder.itemView, pos);//把事情交给实现的接口来处理
                 }
             });
+
         }
+
     }
 
-
-    /**获取数据的数量*/
+    /**
+     * 获取数据的数量
+     */
     @Override
     public int getItemCount() {
-        return mDatas.length;
+        return datas.length;
     }
 
 
-    /**自定义的VIewHolder，持有每给Item的所有界面的元素*/
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    /**
+     * 自定义的ViewHolder，持有每个Item的所有界面元素
+     */
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mTextView;
         public ViewHolder(View itemView) {
             super(itemView);
-            mTextView = (TextView) itemView.findViewById(R.id.item_main_text);
+            mTextView = (TextView) itemView.findViewById(R.id.timeTextView);
         }
     }
 
     /**添加点击事件*/
-    public  interface OnItemClickListener{
+  public interface OnItemClickListener{
         void ItemClickListener(View view, int position);
     }
 
     public void setOnClickListener(OnItemClickListener listener) {
         this.mListener = listener;
     }
+
+
 }
