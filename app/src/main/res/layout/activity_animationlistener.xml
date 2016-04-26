@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listener_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/myactionbar"/>
+
+    <Button
+        android:id="@+id/listener_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="添加图片"
+        android:textColor="#000"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/listener_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listener_add"
+        android:text="删除图片"
+        android:textColor="#000"
+        android:textSize="17sp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/listener_imageView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="200dp"
+        android:src="@mipmap/u"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
