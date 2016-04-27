@@ -34,6 +34,11 @@ import butterknife.InjectView;
  * 9.AnimatorInflater；用户加载属性的动画的xml文件
  * 10.TypeEvaluator；类型估值，主要用于设置动画属性的值
  * 11.TimeInterpolator；时间插值
+ *
+ *
+ * ObjectAnimator 实现动画
+ * valueAnimator 实现动画
+ * AnimatorSet 使用动画
  */
 public class PropertyAnimationActivity extends BaseActivity {
     @InjectView(R.id.propertyAnimation_content)

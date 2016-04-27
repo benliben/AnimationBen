@@ -9,10 +9,13 @@
 
     <ImageView
         android:id="@+id/value_imageView"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="87dp"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/dot" />
+        android:src="@mipmap/dot"
+        android:layout_below="@+id/include"
+        android:layout_centerHorizontal="true" />
 
     <LinearLayout
         android:layout_alignParentBottom="true"

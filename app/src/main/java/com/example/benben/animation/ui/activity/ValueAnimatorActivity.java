@@ -67,6 +67,7 @@ public class ValueAnimatorActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.topLeft:
+                finish();
                 break;
             case R.id.value_text1:
                 verticalRun(view);
@@ -119,8 +120,8 @@ public class ValueAnimatorActivity extends BaseActivity {
             @Override
             public PointF evaluate(float fraction, PointF startValue, PointF endValue) {
                 PointF point = new PointF();
-                point.x = 200 * fraction * 3;
-                point.y = 0.5f * 200 * (fraction * 3) * (fraction * 3);
+                point.x = 200 * fraction * 3;//s=vt
+                point.y = 0.5f * 200 * (fraction * 3) * (fraction * 3);//h=1/2*a*t*t
                 return point;
             }
         });
@@ -130,7 +131,7 @@ public class ValueAnimatorActivity extends BaseActivity {
             public void onAnimationUpdate(ValueAnimator animation) {
                 PointF point = (PointF) animation.getAnimatedValue();
                 mImageView.setX(point.x);
-                mImageView.setX(point.y);
+                mImageView.setY(point.y);
             }
         });
     }
@@ -152,11 +153,6 @@ public class ValueAnimatorActivity extends BaseActivity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 Log.e("lyx", "onAnimationEnd: ");
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-                Log.e("lyx", "onAnimationCancel: ");
                 ViewGroup parent = (ViewGroup) mImageView.getParent();
                 if (parent != null) {
                     parent.removeView(mImageView);
@@ -164,12 +160,19 @@ public class ValueAnimatorActivity extends BaseActivity {
             }
 
             @Override
+            public void onAnimationCancel(Animator animation) {
+                Log.e("lyx", "onAnimationCancel: ");
+
+            }
+            @Override
             public void onAnimationRepeat(Animator animation) {
                 Log.e("lyx", "onAnimationRepeat: ");
 
             }
         });
         anim.start();
+
+        Log.e("lyx", "onAnimationEnd: "+1);
 
 
         /**简单写法*/
