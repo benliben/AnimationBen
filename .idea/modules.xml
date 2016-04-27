@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Animation.iml" filepath="$PROJECT_DIR$/Animation.iml" />
       <module fileurl="file://$PROJECT_DIR$/AnimationBen.iml" filepath="$PROJECT_DIR$/AnimationBen.iml" />
       <module fileurl="file://$PROJECT_DIR$/ToolsLibrary/ToolsLibrary.iml" filepath="$PROJECT_DIR$/ToolsLibrary/ToolsLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ToolsLibrary/ToolsLibrary.iml" filepath="$PROJECT_DIR$/ToolsLibrary/ToolsLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/frescolibrary/frescolibrary.iml" filepath="$PROJECT_DIR$/frescolibrary/frescolibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/frescolibrary/frescolibrary.iml" filepath="$PROJECT_DIR$/frescolibrary/frescolibrary.iml" />
     </modules>
   </component>
