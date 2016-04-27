@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutAnimation_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/layoutAnimation_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加Btns" />
+
+    <CheckBox
+        android:id="@+id/layoutAnimation_appear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="APPEARING(出现）" />
+
+    <CheckBox
+        android:id="@+id/layoutAnimation_change_appearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="CHANGE_APPEARING(）" />
+
+    <CheckBox
+        android:id="@+id/layoutAnimation_disappearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="DISAPPEARING(）" />
+
+    <CheckBox
+        android:id="@+id/layoutAnimation_change_disappearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="CHANGE_DISAPPEARING(）" />
+    <!--<GridLayout-->
+        <!--android:id="@+id/layoutAnimation_gridLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+</LinearLayout>

@@ -32,7 +32,10 @@
         <!--ValueAnimator-->
         <activity android:name=".ui.activity.ValueAnimatorActivity"></activity>
         <!--********************************************************************-->
-
+        <!--Layout Animation-->
+        <activity android:name=".ui.activity.LayoutAnimationActivity"></activity>
+        <!--ViewAnim-->
+        <activity android:name=".ui.activity.ViewAnimActivity"></activity>
     </application>
 
 </manifest>

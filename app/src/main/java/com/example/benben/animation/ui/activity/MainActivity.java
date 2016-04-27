@@ -6,11 +6,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.Animation;
 
 import com.example.benben.animation.R;
 import com.example.benben.animation.model.MainModel;
-import com.example.benben.animation.ui.adapter.AnimationAdapter;
 import com.example.benben.animation.ui.adapter.MainAdapter;
 
 import java.util.ArrayList;
@@ -29,7 +27,7 @@ public class MainActivity extends BaseActivity {
     private List<MainModel> mModels;
     private MainAdapter mAdapter;
     private String[] mData = {"Animation", "LayoutAnimationController","AnimationListener",
-                                "PropertyAnimation"};
+                                "PropertyAnimation","LayoutAnimation(不成功","VIewAnim(不成功"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,6 +58,13 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 3:
                         PropertyAnimationActivity.startPropertyAnimationActivity(MainActivity.this);
+                        break;
+                    case 4:
+                        LayoutAnimationActivity.startLayoutAnimation(MainActivity.this);
+                        break;
+                    case 5:
+                        ViewAnimActivity.startViewAnimActivity(MainActivity.this);
+
                 }
             }
         });
