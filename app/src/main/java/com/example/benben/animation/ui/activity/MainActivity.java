@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
- * Created by tangjunjie on 2016/4/25.
+ * Created by benben on 2016/4/25.
  */
 public class MainActivity extends BaseActivity {
     @InjectView(R.id.main_recyclerView)
