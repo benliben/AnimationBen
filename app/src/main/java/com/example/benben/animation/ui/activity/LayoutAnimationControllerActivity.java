@@ -5,8 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -75,10 +74,17 @@ public class LayoutAnimationControllerActivity extends BaseActivity {
         return simpleAdapter;
     }
 
+    @OnClick({R.id.topLeft, R.id.layout_button})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.topLeft:
+                finish();
+                break;
+            case R.id.layout_button:
+                layoutList.setAdapter(createListAdapter());
 
-    @OnClick(R.id.layout_button)
-    public void onClick() {
-        layoutList.setAdapter(createListAdapter());
+                break;
+        }
     }
 
     /**在代码中去实现效果*/

@@ -18,6 +18,7 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 
 /**
  * Created by benben on 2016/4/25.
@@ -34,8 +35,8 @@ import butterknife.InjectView;
  * 9.AnimatorInflater；用户加载属性的动画的xml文件
  * 10.TypeEvaluator；类型估值，主要用于设置动画属性的值
  * 11.TimeInterpolator；时间插值
- *
- *
+ * <p/>
+ * <p/>
  * ObjectAnimator 实现动画
  * valueAnimator 实现动画
  * AnimatorSet 使用动画
@@ -49,8 +50,8 @@ public class PropertyAnimationActivity extends BaseActivity {
         ActivityCompat.startActivity(activity, intent, null);
     }
 
-    private String[] mData = {"ObjectAnimator","ValueAnimator"};
-    private List<MainModel>  mModel;
+    private String[] mData = {"ObjectAnimator", "ValueAnimator"};
+    private List<MainModel> mModel;
     private MainAdapter mAdapter;
 
     @Override
@@ -88,5 +89,10 @@ public class PropertyAnimationActivity extends BaseActivity {
                 }
             }
         });
+    }
+
+    @OnClick(R.id.topLeft)
+    public void onClick() {
+        finish();
     }
 }

@@ -49,7 +49,7 @@ public class AnimationListener extends BaseActivity {
         ButterKnife.inject(this);
     }
 
-    @OnClick({R.id.listener_add, R.id.listener_delete})
+    @OnClick({R.id.listener_add, R.id.listener_delete,R.id.topLeft})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.listener_add:
@@ -78,6 +78,9 @@ public class AnimationListener extends BaseActivity {
                  * 可以直接删除
                  *  mLayout.removeView(mImageView);
                  */
+                break;
+            case R.id.topLeft:
+                finish();
                 break;
         }
     }
