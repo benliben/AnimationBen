@@ -1,4 +1,4 @@
-package com.example.benben.animation.ui.activity.tools;
+package com.example.benben.animation.ui.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,10 +13,11 @@ import android.view.WindowManager;
  * 屏幕相关辅助类
  */
 public class ScreenUtilsBen {
-    public ScreenUtilsBen() {
+    private ScreenUtilsBen() {
         /*cannot be instantiated*/
         throw new UnsupportedOperationException("cannot be instantiated");
     }
+
     /**
      * 获取屏幕宽度
      *

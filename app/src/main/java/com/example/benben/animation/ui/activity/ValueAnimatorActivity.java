@@ -1,7 +1,6 @@
 package com.example.benben.animation.ui.activity;
 
 import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
@@ -20,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.benben.animation.R;
-import com.example.benben.animation.ui.activity.tools.ScreenUtilsBen;
+
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -94,7 +93,7 @@ public class ValueAnimatorActivity extends BaseActivity {
     public void verticalRun(View view) {
 
 
-    int  mScreenHeight=  ScreenUtilsBen.getScreenHeight(ValueAnimatorActivity.this);
+    int  mScreenHeight=ScreenUtilsBen.getScreenHeight(ValueAnimatorActivity.this);
         ValueAnimator animator = ValueAnimator.ofFloat(0, mScreenHeight- mImageView.getHeight());
         animator.setTarget(mImageView);
         animator.setDuration(1000).start();

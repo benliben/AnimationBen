@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.benben.animation.R;
-import com.example.benben.animation.ui.activity.tools.ScreenUtilsBen;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
